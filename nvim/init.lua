@@ -1,0 +1,6 @@
+require('basic')
+require('config.lazy')
+require('keybind')
+require('treesitter')
+require('notifys')
+vim.cmd.colorscheme("kanagawa-wave")
