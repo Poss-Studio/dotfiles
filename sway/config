@@ -8,6 +8,7 @@ font pango:0xproto nerd font 12
 set $menu rofi -show run
 set $browser firefox
 exec_always fcitx5
+exec_always dms restart
 exec_always watt-toolkit
 exec_always gammastep -O 4500
 exec_always swaymsg "output * power on"
@@ -98,14 +99,6 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     bindsym Print exec grim
-bar {
-    position top
-    status_command i3status-rs ~/.config/i3status-rust/config.toml
-    font pango:Hack 12
-    colors {
-    	background #2e3440
-	}
-}
 output eDP-1 scale 1.5
 output eDP-1 mode 2560x1600@120Hz
 default_border pixel 
