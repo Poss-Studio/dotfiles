@@ -1,0 +1,11 @@
+(defun run-c-code()
+  (interactive)
+  (save-buffer)
+  (compile "gcc main.c -o main &&./main"))
+(defun run-typescript()
+  (interactive)
+  (compile "tsc main.ts &&node main.js"))
+(global-set-key (kbd "C-c C-g")'run-c-code)
+(global-set-key (kbd "C-w")'package-upgrade-all)
+(global-set-key (kbd "C-c C-t")'run-typescript)
+

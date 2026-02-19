@@ -1,0 +1,41 @@
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(setq inhibit-startup-message t) ;;关闭启动界面
+(setq initial-buffer-choice "~/") ;;设置开启自动打开~
+(global-display-line-numbers-mode)
+(electric-pair-mode 1)
+(setq package-archives '(("gnu"    . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+                         ("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+                         ("melpa"  . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+(scroll-bar-mode -1)
+(icomplete-mode 1)
+(global-company-mode 1)
+(setq company-idle-delay 0)
+(set-frame-font "Iosevka Fixed-20")
+(require 'emms-setup)
+(emms-all)
+(setq emms-player-list '(emms-player-mpv))
+(setq emms-source-file-default-directory "~/Music/")
+(require 'eglot)
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-hook 'c++-mode-hook 'eglot-ensure)
+(add-hook 'rust-mode-hook 'eglot-ensure)
+(add-hook 'python-mode-hook 'eglot-ensure)
+(add-hook 'typescript-mode-hook 'eglot-ensure)
+(with-eval-after-load 'company
+  (setq company-idle-delay 0)
+  (setq company-tooltip-align-annotations t))
+(add-hook 'eglot-managed-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook #'eglot-format-buffer nil t)))
+(setq company-idle-delay 0)
+
+(setq company-tooltip-align-annotations t)
+(define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
+(define-key company-active-map (kbd "RET") 'company-complete-selection)
+(setq company-global-modes '(not eshell-mode comint-mode))  ; 排除不需要补全的模式
+(with-eval-after-load 'eglot
+  (add-to-list 'company-backends 'company-eglot))
+(add-to-list 'default-frame-alist '(undecorated . t))

@@ -1,19 +1,20 @@
 return {
-		 {
-        "sainnhe/everforest", -- 插件仓库地址
-        priority = 1000, -- 确保高优先级加载
-        config = function()
-            -- 2. 在插件加载完成后，进行其自身的配置
-            vim.g.everforest_background = 'hard'
-            vim.g.everforest_enable_italic = 1
-            -- 3. 最后设置颜色方案和背景
-            vim.cmd.colorscheme('everforest')
-            vim.o.background = 'dark'
-        end,
-    },
 	{
-		"rebelot/kanagawa.nvim"
-	},
+    'nvim-telescope/telescope.nvim', version = '*',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        -- optional but recommended
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    }
+};
+	{"https://github.com/neanias/everforest-nvim",
+	config = function ()
+		require('everforest').setup({
+			ui_constast = "high",
+			background = "hard",
+		})
+	end
+};
 	{
 	"nvim-tree/nvim-tree.lua",
 	lazy = false,
@@ -102,23 +103,4 @@ return {
   {
 	"nvim-treesitter/nvim-treesitter"
   },
-  {
-	  {
-        "rcarriga/nvim-notify",
-        config = function()
-            require("notify").setup({
-                background_colour = "#000000", 
-                timeout = 3000,
-                max_height = function() return math.floor(vim.o.lines * 0.75) end, -- 最大高度
-                max_width = function() return math.floor(vim.o.columns * 0.75) end, -- 最大宽度
-                -- 渲染样式：可选 "default", "minimal", "simple" 或自定义函数
-                render = "default",
-                -- 动画阶段：可选 "fade_in_slide_out", "slide", "fade", "static"
-                stages = "fade_in_slide_out",
-                -- 其他功能：是否启用全局替换（下方会说明）
-            })
-            vim.notify = require("notify")
-        end,
-    },
   }
-}
