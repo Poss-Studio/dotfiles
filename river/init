@@ -3,9 +3,9 @@
 # $XDG_CONFIG_HOME/river/init or $HOME/.config/river/init first.
 # See the river(1), riverctl(1), and rivertile(1) man pages for complete
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
-riverctl spawn "swaybg -i ~/Pictures/arch.jpg -m fill"
+riverctl spawn "swaybg -i ~/Pictures/Dog.png -m fill"
 riverctl spawn "i3status | dam"
-riverctl spawn watt-toolkit
+riverctl spawn Steam++
 riverctl spawn "gammastep -O 5000"
 riverctl spawn fcitx5
 riverctl map normal Super Return spawn foot
@@ -105,5 +105,5 @@ riverctl rule-add -app-id "bar" csd
 riverctl border-width 0
 riverctl default-layout rivertile
 riverctl xcursor-theme macOS
-rivertile -view-padding 6 -outer-padding 6 &
+rivertile -view-padding 0 -outer-padding 0 &
 riverctl spawn "wlr-randr --output eDP-1 --mode 2560x1600@120 --pos 0,0 --scale 1.5"
