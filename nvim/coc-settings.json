@@ -1,5 +1,9 @@
 {
 	"sumneko-lua.locale": "zh-cn",
 	"extensions.updateCheck": "daily",
-	"tsserver.locale": "zh-CN"
+	"tsserver.locale": "zh-CN",
+	"suggest.noselect": true,
+	"suggest.enablePreselect": false,
+	"colors.enable":true,
+	"semanticTokens.enable": true
 }
