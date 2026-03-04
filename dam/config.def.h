@@ -1,7 +1,7 @@
 /* appearance */
 static int showbar           = 1; /* 0 means no bar */
 static int topbar            = 1; /* 0 means bottom bar */
-static const char *fonts[]   = { "0xproto nerd font:size=13" };
+static const char *fonts[]   = { "Iosevka Fixed Medium:size=13" };
 static uint32_t colors[][3]  = {
 	/*               fg          bg         */
 	[SchemeNorm] = { 0xbbbbbbff, 0x222222ff },
