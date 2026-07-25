@@ -1,0 +1,19 @@
+[font]
+size = 16
+# ... 其他全局字体设置
+
+[[font.normal]]
+family = "Iosevka"
+style = "Regular" # 或留空
+
+[[font.bold]]
+family = "Iosevka"
+style = "Bold"  # 关键：为粗体指定样式
+
+[[font.italic]]
+family = "Iosevka"
+style = "Italic" # 关键：为斜体指定样式
+
+[[font.bold_italic]]
+family = "Iosevka"
+style = "Bold Italic" # 关键：为粗斜体指定样式
