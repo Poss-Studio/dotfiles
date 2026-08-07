@@ -106,4 +106,4 @@ riverctl border-width 0
 riverctl default-layout rivertile
 riverctl xcursor-theme macOS
 rivertile -view-padding 0 -outer-padding 0 &
-riverctl spawn "wlr-randr --output eDP-1 --mode 2560x1600@120 --pos 0,0 --scale 1.5"
+riverctl spawn "wlr-randr --output eDP-1 --mode 2560x1600@120 --pos 0,0 --scale 1.5 --adaptive-sync enabled""
