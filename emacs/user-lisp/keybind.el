@@ -1,0 +1,13 @@
+;; -*- lexical-binding: t; -*-
+(defun run-c-code()
+  (interactive)
+  (compile "cd ..;cmake -B build&&cmake --build build&&./build/main"))
+(defun run-typescript()
+  (interactive)
+  (compile "bun run index.ts"))
+(defun python-run()
+  (interactive)
+  (compile "uv run py"))
+(global-set-key (kbd "C-c C-g")'run-c-code)
+(global-set-key (kbd "C-c C-t")'run-typescript)
+(provide 'keybind)
