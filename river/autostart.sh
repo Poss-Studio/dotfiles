@@ -1,2 +1,2 @@
-#!/usr/bin/sh
-wmenu-run -f "Iosevka Fixed Medium 14"
+#!/usr/bin/dash
+rofi -show drun -font "Iosevka 14" -theme ~/.config/rofi/config.rasi -icon-theme "Papirus" -show-icons &
