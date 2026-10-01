@@ -1,0 +1,6 @@
+在.config/emacs/下创建新的文件夹
+名为site-lisp/
+然后执行git clone https://ghf.无名氏.top/github.com/manateelazycat/lsp-bridge.git ~/.config/emacs/site-lisp/lsp-bridge/
+补全py依赖:
+paru -S python-epc python-orjson python-sexpdata python-six python-setuptools python-paramiko python-rapidfuzz python-watchdog python-packaging
+python3 -c "import epc, orjson, sexpdata, six, paramiko, rapidfuzz, watchdog, packaging; print('All Python dependencies are OK')"
